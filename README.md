@@ -137,23 +137,24 @@ Once connected, you can ask your AI agent to perform various tasks:
 ## 🛠️ Available Tools
 
 | Category | Tool Name | Description |
-|----------|-----------|-------------|
-| **Auth** | `linkedin_get_oauth_url` | Generate login link. |
-| | `linkedin_exchange_code` | Exchange auth code for token. |
-| **Post** | `linkedin_create_post` | Create a text update. |
-| | `linkedin_create_image_post` | Create a post with an image. |
-| | `linkedin_update_post` | Update a post (Delete & Re-create). |
-| | `linkedin_delete_post` | Delete a post by ID. |
-| | `linkedin_get_recent_posts` | List recent activity. |
-| **Comment** | `linkedin_create_comment` | Comment on a share/article. |
-| | `linkedin_get_post_comments` | Read comments on a post. |
-| | `linkedin_delete_comment` | Delete a comment. |
-| **Profile** | `linkedin_get_my_profile` | Get your profile data. |
-| | `linkedin_get_member_profile` | Get public member data. |
-| **Company** | `linkedin_search_companies` | Find companies by keyword. |
-| | `linkedin_get_company_profile` | Get company details. |
-| **Job** | `linkedin_search_jobs` | Search job listings. |
-| | `linkedin_get_job_details` | Get full job description. |
+| :--- | :--- | :--- |
+| **Auth** | `linkedin_get_oauth_url` | Generate the OAuth 2.0 authorization URL for LinkedIn login. |
+| | `linkedin_exchange_code` | Exchange an authorization code for a persistent access token. |
+| **Profile** | `linkedin_get_my_profile` | Retrieve your own profile information (Name, Email, Picture). |
+| | `linkedin_get_member_profile` | Fetch public profile details for a specific member using their URN. |
+| **Search** | `linkedin_search_people` | Search for LinkedIn members based on keywords and filters. |
+| **Post** | `linkedin_create_post` | Publish a text-only update to your professional LinkedIn feed. |
+| | `linkedin_create_image_post` | Upload an image and publish a media post to your feed. |
+| | `linkedin_update_post` | Update a post's content (via the Delete & Re-create method). |
+| | `linkedin_delete_post` | Permanently remove a post from your feed using its URN. |
+| | `linkedin_get_recent_posts` | Retrieve a list of your most recent activity and publications. |
+| **Comment** | `linkedin_create_comment` | Post a new comment on a share, article, or video. |
+| | `linkedin_get_post_comments` | List all comments and reactions for a specific post. |
+| | `linkedin_delete_comment` | Remove a comment you previously published. |
+| **Company** | `linkedin_search_companies` | Find organizational profiles using keywords or industries. |
+| | `linkedin_get_company_profile` | Retrieve detailed information about a specific company. |
+| **Job** | `linkedin_search_jobs` | Find open career opportunities by keywords and location. |
+| | `linkedin_get_job_details` | Get the full description and application details for a job. |
 
 ---
 

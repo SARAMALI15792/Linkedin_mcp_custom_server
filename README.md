@@ -153,3 +153,9 @@ linkedin_custom_mcp/
 │   ├── job.py           # Job data
 │   └── search.py        # People search
 ```
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.

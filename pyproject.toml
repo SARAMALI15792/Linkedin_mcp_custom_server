@@ -1,16 +1,83 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
 [project]
-name = "linkedin-custom-mcp"
-version = "0.1.0"
-description = "Add your description here"
+name = "linkedin-mcp-server"
+version = "1.0.0"
+description = "Model Context Protocol (MCP) server for LinkedIn - enabling AI agents to interact with LinkedIn's professional network"
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+authors = [
+    {name = "SARAM ALI", email = "saramali15792@gmail.com"}
+]
+keywords = [
+    "mcp",
+    "model-context-protocol",
+    "linkedin",
+    "ai",
+    "llm",
+    "automation",
+    "fastmcp",
+    "claude",
+    "api"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Communications",
+    "Topic :: Internet :: WWW/HTTP",
+]
 dependencies = [
-    "authlib>=1.6.6",
-    "fastapi>=0.128.0",
     "fastmcp>=2.14.2",
     "httpx>=0.28.1",
     "mcp>=1.25.0",
+    "pydantic>=2.0.0",
     "pydantic-settings>=2.12.0",
     "python-dotenv>=1.2.1",
-    "uvicorn>=0.40.0",
 ]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "black>=23.0.0",
+    "ruff>=0.1.0",
+    "mypy>=1.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/SARAMALI15792/LinkedIn_mcp_custom_server"
+Repository = "https://github.com/SARAMALI15792/LinkedIn_mcp_custom_server"
+Issues = "https://github.com/SARAMALI15792/LinkedIn_mcp_custom_server/issues"
+Documentation = "https://github.com/SARAMALI15792/LinkedIn_mcp_custom_server#readme"
+
+[project.scripts]
+linkedin-mcp-server = "linkedin_mcp_server.__main__:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["linkedin_mcp_server"]
+
+[tool.hatch.version]
+path = "linkedin_mcp_server/__init__.py"
+
+[tool.black]
+line-length = 100
+target-version = ['py310']
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false

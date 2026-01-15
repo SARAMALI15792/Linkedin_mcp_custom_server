@@ -462,7 +462,7 @@ Future enhancements being considered:
 **Q: Why can't I read my own posts?**
 A: The `r_member_social` permission required to read posts is restricted by LinkedIn. Most third-party apps cannot access this feature.
 
-**Q: How long do access tokens last?**
+**Q: How long do to access tokens last?**
 A: LinkedIn controls token expiration. Typically tokens last for 60 days, but this can vary. You'll need to re-authenticate when tokens expire.
 
 **Q: Can I use this for multiple LinkedIn accounts?**
